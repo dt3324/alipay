@@ -1,0 +1,23 @@
+server:
+  port: 8090
+spring:
+  mvc:
+    view:
+    prefix: /WEB-INF/views/
+    suffix: .jsp
+  http:
+  encoding.charset: UTF-8
+  encoding.enable: true
+  encoding.force: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/alipay?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT&useSSL=false
+    username: root
+    password: root
+mybatis:
+  type-aliases-package: com.hnf.alipay.domain
+  mapper-locations: classpath:mapper/*.xml
+
+logging:
+  level:
+    com.hnf.alarm_log.mapper: DEBUG
